@@ -52,10 +52,10 @@ html, body, #root {
   background: var(--bg);
   color: var(--text-1);
   font-family: var(--ff-body);
-  font-size: 14px;
+  font-size: 22px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
+  overflow-y: auto;                          /*changed*/
 }
 
 button { cursor: pointer; border: none; background: none; font-family: var(--ff-body); }
@@ -67,7 +67,7 @@ input[type="range"] { appearance: none; -webkit-appearance: none; }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 
 /* ─── APP SHELL ──────────────────────────────────────────────────────────── */
-.app-root { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+.app-root { position: relative; width: 100vw; min-height: 100vh; overflow-y: auto;  }      /*changed s*/
 
 .app-bg {
   position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
@@ -526,7 +526,7 @@ input[type="range"] { appearance: none; -webkit-appearance: none; }
   background: var(--accent-dim);
   box-shadow: 0 0 0 1px var(--accent) inset;
 }
-.bt-icon { font-size: 1.4rem; }
+.bt-icon { font-size: 1.4rem; color: var(--text-3);}
 .bt-label { font-size: 0.63rem; font-weight: 700; color: var(--text-2); text-align: center; letter-spacing: 0.02em; }
 .body-type-card.selected .bt-label { color: var(--accent); }
 
