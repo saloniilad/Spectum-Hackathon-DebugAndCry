@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useAppStore } from '../store/AppStore'
+import { RateMyCombo } from './RateMyCombo'
 
 const OutfitBar: React.FC = () => {
   const { wornItems, toggleWornItem, getActiveSize, setItemSize, getRecommendedSize } = useAppStore()
@@ -58,7 +59,7 @@ const OutfitBar: React.FC = () => {
           })}
         </AnimatePresence>
       </div>
-
+        <RateMyCombo />
       <div className="dock-checkout">
         <div className="dock-total">
           <span className="total-label">Total</span>

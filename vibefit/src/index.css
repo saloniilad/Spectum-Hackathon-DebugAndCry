@@ -1113,3 +1113,58 @@ input[type="range"] { appearance: none; -webkit-appearance: none; }
 .avatar-viewer-wrap {
   position: relative;
 }
+
+.rate-my-combo-wrap { padding: 8px 12px 0; }
+
+.rate-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border: 0.5px solid var(--border); border-radius: 10px;
+  background: transparent; color: var(--fg); font-size: 15px; font-weight: 500;
+  cursor: pointer; transition: background 0.15s;
+}
+.rate-btn:hover { background: rgba(255,255,255,0.06); }
+.rate-btn--loading { opacity: 0.6; pointer-events: none; }
+.rate-star { font-size: 16px; }
+.rate-spinner {
+  width: 15px; height: 15px; border: 1.5px solid rgba(255,255,255,0.2);
+  border-top-color: var(--fg); border-radius: 50%; animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.combo-result {
+  background: rgba(255,255,255,0.04); border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 14px; padding: 16px; margin-top: 10px;
+}
+.combo-score-row { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.combo-score-circle {
+  width: 64px; height: 64px; border-radius: 50%; border: 2.5px solid;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.combo-score-num { font-size: 26px; font-weight: 500; line-height: 1; }
+.combo-score-denom { font-size: 13px; opacity: 0.6; }
+.combo-verdict-label { font-size: 17px; font-weight: 500; }
+.combo-verdict-sub { font-size: 14px; opacity: 0.6; margin-top: 2px; }
+
+.combo-breakdown { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.combo-b-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.combo-b-label { width: 150px; flex-shrink: 0; opacity: 0.7; }
+.combo-b-track { flex: 1; height: 5px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
+.combo-b-fill { height: 5px; border-radius: 4px; }
+.combo-b-score { width: 34px; text-align: right; opacity: 0.8; }
+
+.combo-reasoning { font-size: 14px; opacity: 0.7; line-height: 1.6; margin-bottom: 10px; }
+.combo-tips { display: flex; flex-wrap: wrap; gap: 6px; }
+.combo-tip {
+  font-size: 13px; background: rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 4px 11px; opacity: 0.8;
+}
+
+.combo-error {
+  font-size: 14px;
+  color: var(--color-text-danger);
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 0.5px solid var(--color-border-danger);
+  border-radius: var(--border-radius-md);
+}
